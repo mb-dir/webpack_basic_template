@@ -4,7 +4,7 @@
   "description": "Simple webpack template for static sites.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "prod": "webpack --config webpack.prod.js"
   },
   "repository": {
     "type": "git",
