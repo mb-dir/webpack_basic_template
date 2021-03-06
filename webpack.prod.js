@@ -13,27 +13,15 @@ module.exports = {
 
     module: {
         rules: [
-            {
-                test: /\.s[ac]ss$/i,
-                loader: [
-                    "style-loader",
-                    {
-                        loader: "css-loader",
-                    },
-                    {
-                        loader: "sass-loader",
-                    },
-                ],
-            },
-            {
-                test: /\.css$/i,
-                loader: [
-                    "style-loader",
-                    {
-                        loader: "css-loader",
-                    },
-                ],
-            },
+          {
+            test: /\.css$/i,
+            use: ['style-loader', 'css-loader'],
+          },
+
+          {
+            test: /\.s[ac]ss$/i,
+            use: ["style-loader", "css-loader"," sass-loader",],
+          },
         ],
       },
 
