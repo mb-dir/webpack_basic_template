@@ -5,6 +5,7 @@ module.exports = {
     mode: "production",
     entry: {
         index: "./src/modules/index.js",
+        //You can add here more entrypoints
     },
     output: {
         filename: "[name].[contenthash:8].js",
@@ -31,5 +32,6 @@ module.exports = {
             filename: "index.html",
             template: "./src/pages/index.html",
         }),
+        //You can add here more pages
     ],
 };
