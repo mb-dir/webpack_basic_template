@@ -34,4 +34,8 @@ module.exports = {
         }),
         //You can add here more pages
     ],
+    devServer: {
+        port: 8080,
+        open: true,
+    },
 };
