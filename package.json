@@ -4,7 +4,8 @@
   "description": "Simple webpack template for static sites.",
   "main": "index.js",
   "scripts": {
-    "prod": "webpack --config webpack.prod.js"
+    "prod": "webpack --config webpack.prod.js",
+    "dev": "webpack --config webpack.dev.js"
   },
   "repository": {
     "type": "git",
