@@ -1,3 +1,16 @@
+/* You can delete these styles */
 body{
-    background-color: red;
+    background-color: black;
+    color: whitesmoke;
+    font-family: 'Courier New', Courier, monospace;
+    text-align: center;
+}
+
+.header{
+    font-size: 48px;
+}
+
+.link{
+    color: whitesmoke;
+    font-size: 18px;
 }
