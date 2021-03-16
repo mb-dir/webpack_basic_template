@@ -1,5 +1,5 @@
 // styles import
-import "../styles/test.css";
+import "../styles/test.scss";
 
 
 //js modules import
