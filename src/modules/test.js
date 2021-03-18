@@ -1,1 +1,1 @@
-console.log("Hello_v2 🐼🐼")
+console.log("Hello_v2 🐼🐼");
