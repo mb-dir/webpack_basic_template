@@ -1,5 +1,4 @@
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const HtmlWebpackPlugin = require('html-webpack-plugin')
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
     mode: "development",
@@ -21,13 +20,12 @@ module.exports = {
 
           {
             test: /\.s[ac]ss$/i,
-            use: ["style-loader", "css-loader", "sass-loader",],
+            use: ["style-loader", "css-loader", "sass-loader"],
           },
         ],
       },
 
     plugins: [
-        new CleanWebpackPlugin(),
         new HtmlWebpackPlugin({
             filename: "index.html",
             template: "./src/pages/index.html",
