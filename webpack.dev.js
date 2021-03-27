@@ -1,43 +1,46 @@
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { merge } = require('webpack-merge');
+const common = require("./webpack.common.js");
 
-module.exports = {
+module.exports = merge(common, {
+    devtool: "source-map",
     mode: "development",
-    entry: {
-        index: "./src/modules/index.js",
-        //You can add here more entrypoints
-    },
-    output: {
-        filename: "[name].[contenthash:8].js",
-        path: __dirname + "/dist",
-    },
 
     module: {
-        rules: [
-          {
-            test: /\.css$/i,
-            use: ['style-loader', 'css-loader'],
-          },
-
-          {
-            test: /\.s[ac]ss$/i,
-            use: ["style-loader", "css-loader", "sass-loader"],
-          },
-        ],
-      },
-
-    plugins: [
-        new HtmlWebpackPlugin({
-            filename: "index.html",
-            template: "./src/pages/index.html",
-        }),
-        new HtmlWebpackPlugin({
-          filename: "subpage.html",
-          template: "./src/pages/subpage.html",
-        }),
-        //You can add here more pages
-    ],
+      rules: [
+        {
+          test: /\.s[ac]ss$/i,
+          use: [
+            "style-loader",
+            {
+              loader: "css-loader",
+              options: {
+                sourceMap: true,
+              },
+            },
+            {
+              loader: "sass-loader",
+              options: {
+                sourceMap: true,
+              },
+            },
+          ],
+        },
+        {
+          test: /\.css$/i,
+          use: [
+            "style-loader",
+            {
+              loader: "css-loader",
+              options: {
+                sourceMap: true,
+              },
+            },
+          ],
+        },
+      ],
+  },
     devServer: {
         port: 8080,
         open: true,
     },
-};
+});

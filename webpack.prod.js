@@ -1,41 +1,23 @@
-const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { merge } = require('webpack-merge');
+const common = require("./webpack.common.js");
+const MiniCssExtractPlugin = require("mini-css-extract-plugin");
 
-module.exports = {
+module.exports = merge(common, {
     mode: "production",
-    entry: {
-        index: "./src/modules/index.js",
-        //You can add here more entrypoints
-    },
-    output: {
-        filename: "[name].[contenthash:8].js",
-        path: __dirname + "/dist",
-    },
-
     module: {
         rules: [
           {
             test: /\.css$/i,
-            use: ['style-loader', 'css-loader'],
+            use: [MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader'],
           },
 
           {
             test: /\.s[ac]ss$/i,
-            use: ["style-loader", "css-loader", "sass-loader"],
+            use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader", "sass-loader"],
           },
         ],
-      },
-
+    },
     plugins: [
-        new CleanWebpackPlugin(),
-        new HtmlWebpackPlugin({
-            filename: "index.html",
-            template: "./src/pages/index.html",
-        }),
-        new HtmlWebpackPlugin({
-          filename: "subpage.html",
-          template: "./src/pages/subpage.html",
-        }),
-        //You can add here more pages
+        new MiniCssExtractPlugin(),
     ],
-};
+});

@@ -7,3 +7,8 @@ import "../styles/test.scss";
 import "./test.js";
 
 console.log("Hello 🐼");
+
+//Babel test
+document.body.addEventListener("click", ()=>{
+    console.log("Do not touch me!");
+});
