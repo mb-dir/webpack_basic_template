@@ -16,9 +16,28 @@ Simple webpack template for static sites.
 
 ## What can you find in this boilerplate?
 
-* support for css and scss,
-* support for older browsers(babel, autoprefixer),
-* amenities for developers like DevServer, gh pages and more useful plugins
+* support for css and scss
+    * sass
+    * sass-loader
+    * postcss
+    * postcss-loader
+    * css-loader
+    * MiniCssExtractPlugin
+    * style-loader
+* support for older browsers
+    * babel(babel/cli, babel/core, babel-loader, babel/polyfill, and babel/preset-env as a preset)
+    * autoprefixer
+* plugins like:
+    * clean-webpack-plugin
+    * html-webpack-plugin
+    * mini-css-extract-plugin
+* webpack facilities
+    * webpack-dev-server
+    * webpack-merge
+* github facilities
+    * gh-pages
+* async support
+    * regenerator-runtime
 
 ## Scripts
 * ` npm run dev ` - runs development mode(with devserver),
