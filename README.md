@@ -2,6 +2,11 @@
 
 Simple webpack template for static sites.
 
+## Prerequisites
+
+* node and npm(cuz this started kit uses npm scripts)
+* git or other DVCS and github(it must be github, because this template has script which publish the page using gh-pages)
+
 ## How to use it?
 
 * Click ` Use this template` (green button above) - this will genereate a new repository based on this starter kit
