@@ -4,7 +4,10 @@ Simple webpack template for static sites.
 
 ## How to use it?
 
-Click on **Use this template** button to generate a new repository based on this starter kit. After that clone it to your computer, go to the project directory in console and type **npm install** in order to install required packages.
+* Click ` Use this template` (green button above) - this will genereate a new repository based on this starter kit
+* Clone newly created repository with ` git clone <repo_address> .` (if you use git)
+* In project directory with cloned repository open a terminal and type ` npm install ` in order to install required packages
+* Try to use one of the scripts in order to check if everything works fine
 
 ## What can you find in this boilerplate?
 
