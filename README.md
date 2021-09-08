@@ -43,3 +43,7 @@ Simple webpack template for static sites.
 * ` npm run dev ` - runs development mode(with devserver),
 * ` npm run prod  ` - runs production mode,
 * ` npm run publish  ` - runs prod config and publish the page using gh-pages branch
+
+## License
+
+This project is licensed under the MIT License.
